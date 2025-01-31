@@ -29,7 +29,6 @@ public class ThirdPersonController : MonoBehaviour
     public float gravity = 9.8f;
 
     float jumpElapsedTime = 0;
-
     // Player states
     bool isJumping = false;
     bool isSprinting = false;
@@ -48,6 +47,7 @@ public class ThirdPersonController : MonoBehaviour
 
     void Start()
     {
+
         cc = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
@@ -60,7 +60,6 @@ public class ThirdPersonController : MonoBehaviour
     // Update is only being used here to identify keys and trigger animations
     void Update()
     {
-
         // Input checkers
         inputHorizontal = Input.GetAxis("Horizontal");
         inputVertical = Input.GetAxis("Vertical");
@@ -108,13 +107,11 @@ public class ThirdPersonController : MonoBehaviour
 
     }
 
-
     // With the inputs and animations defined, FixedUpdate is responsible for applying movements and actions to the player
     private void FixedUpdate()
     {
-
-        // Sprinting velocity boost or crounching desacelerate
-        float velocityAdittion = 0;
+            // Sprinting velocity boost or crounching desacelerate
+            float velocityAdittion = 0;
         if ( isSprinting )
             velocityAdittion = sprintAdittion;
         if (isCrouching)
