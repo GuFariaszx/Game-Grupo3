@@ -50,6 +50,7 @@ public class ThirdPersonController : MonoBehaviour
 
         cc = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        cc.detectCollisions = true;
 
         // Message informing the user that they forgot to add an animator
         if (animator == null)
@@ -104,6 +105,8 @@ public class ThirdPersonController : MonoBehaviour
         }
 
         HeadHittingDetect();
+
+        
 
     }
 
@@ -193,5 +196,27 @@ public class ThirdPersonController : MonoBehaviour
             isJumping = false;
         }
     }
+
+    public GameObject respawn;
+
+
+
+    private void OnControllerColliderHit(ControllerColliderHit collision)
+    {
+        if (respawn != null)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                transform.position = respawn.transform.position;
+            }
+        }
+        else
+        {
+            Debug.Log("O objeto respawn não foi associado!");
+        }
+
+    }
+
+
 
 }

@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 3
   tags:
   - Hazard
+  - Enemy
+  - Coin
+  - Sword
+  - Shield
+  - CoinPurse
+  - Diamond
+  - CoinUI
+  - SwordUI
+  - ShieldUI
+  - CoinPurseUI
+  - DiamondUI
   layers:
   - Default
   - TransparentFX
@@ -18,7 +29,7 @@ TagManager:
   - Objetos
   - "Colet\xE1veis"
   - whatIsGround
-  - 
+  - 3UI
   - 
   - 
   - 

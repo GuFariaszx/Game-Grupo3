@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
 
         walkPointRange = 20;
 
-        campoDeVisao = Mathf.Abs(10);
+        campoDeVisao = Mathf.Abs(25);
 
         outOfBoundsMinusZ = -140;
         outOfBoundsZ = 96;

@@ -40,11 +40,14 @@ public class PlayerSCript1 : MonoBehaviour
     {
         cc = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        cc.detectCollisions = true;
+
 
         // Mensagem informando que o usuário esqueceu de adicionar um animator
         if (animator == null)
             Debug.LogWarning("Ei amigo, você não tem o componente Animator no seu jogador. Sem ele, as animações não funcionarão.");
     }
+
 
 
     void Update()
@@ -79,7 +82,7 @@ public class PlayerSCript1 : MonoBehaviour
 
         }
         //coletar os objetos
-        coinText.text = collectedObjects.ToString();
+       
 
     }
 
@@ -143,16 +146,23 @@ public class PlayerSCript1 : MonoBehaviour
         
     }
 
+    public GameObject respawn;
 
 
-  
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnControllerColliderHit(ControllerColliderHit collision)
     {
-        if (collision.gameObject.CompareTag("Hazard"))
+        if (respawn != null)
         {
-            transform.position = new Vector3(1.2f, 2f, 5.57f);
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                transform.position = respawn.transform.position;
+            }
+        } else
+        {
+            Debug.Log("O objeto respawn não foi associado!");
         }
+        
     }
 }
 
