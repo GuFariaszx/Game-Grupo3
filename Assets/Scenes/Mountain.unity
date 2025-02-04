@@ -14095,8 +14095,8 @@ Transform:
   m_GameObject: {fileID: 452486402}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59.92, y: -20.04146, z: -72.79}
-  m_LocalScale: {x: 4.078477, y: 0.9889, z: 1}
+  m_LocalPosition: {x: 59.7403, y: -20.04146, z: -72.79}
+  m_LocalScale: {x: 4.0417705, y: 0.9889, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 440140191}
@@ -42889,7 +42889,7 @@ Transform:
   m_GameObject: {fileID: 1248886791}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.64, y: -20.05, z: -46.7176}
+  m_LocalPosition: {x: 79.57, y: -20.05, z: -46.7176}
   m_LocalScale: {x: 1, y: 0.9691, z: 11.208997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52336,7 +52336,7 @@ Transform:
   m_GameObject: {fileID: 1527619204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.64, y: -20.05, z: 0.9}
+  m_LocalPosition: {x: 79.45, y: -20.05, z: 0.9}
   m_LocalScale: {x: 1, y: 0.9691, z: 11.208997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52384,7 +52384,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 949204225}
+  m_Mesh: {fileID: 298938041}
 --- !u!33 &1527619208
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -60678,8 +60678,8 @@ Transform:
   m_GameObject: {fileID: 1742684300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.6973, y: -31.2829, z: -140.72}
-  m_LocalScale: {x: 0.85113263, y: 0.9889, z: 1}
+  m_LocalPosition: {x: 54.5721, y: -31.2829, z: -140.72}
+  m_LocalScale: {x: 0.82559866, y: 0.9889, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 296662377}
@@ -73421,12 +73421,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 5
   sprintAdittion: 3.5
+  jumpForce: 18
   jumpTime: 0.85
   gravity: 9.8
   collectedObjects: 0
   coinText: {fileID: 0}
-  threshold: -10
-  respawn: {fileID: 1420822042}
 --- !u!114 &8924800430138970650
 MonoBehaviour:
   m_ObjectHideFlags: 0
